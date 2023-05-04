@@ -36,11 +36,16 @@ cambiaSlide(1);
 
 //Costruire le thumbnails
 let thumbnailsHTML = "";
+
 for (let i = 0; i < images.length; i++) {
     const element = images[i];
-
     thumbnailsHTML += `<img class="img-fluid thumb" src="${images[i].image}" alt="${images[i].title}"></img>`;
 }
+
+// Esempio alternativo per chi volesse usare forEach
+// images.forEach(function(element, i) {
+//     thumbnailsHTML += `<img class="img-fluid thumb" src="${images[i].image}" alt="${images[i].title}"></img>`;
+// });
 
 document.getElementById("thumbsWrapper").innerHTML = thumbnailsHTML;
 
